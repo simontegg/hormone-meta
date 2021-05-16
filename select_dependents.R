@@ -15,11 +15,21 @@ gnrha <- filter(data,
                 treatment == 'GnRHa',
                 !(study == 'Schagen' & table == 3))
 
-gnrha %>% mutate(sex = factor(gnrha$sex))
+gnrha <- gnrha %>% mutate(measure = case_when(measure == 'HAZ_spine_BMD' ~ "spine_BMD",
+                                              measure == 'HAZ_hip_BMD' ~ "hip_BMD",
+                                              measure == 'right_hip_BMD' ~ "hip_BMD",
+                                              measure == 'left_hip_BMD' ~ "hip_BMD",
+                                              TRUE ~ measure))
+
+
+
+
+gnrha <- gnrha %>% mutate(measure = factor(measure))
+gnrha <- gnrha %>% mutate(sex = factor(sex))
 
 gnrha_treat <- filter(gnrha, month != 0)
 
-res <- glmulti(z ~ month + sex, data=gnrha,
+res <- glmulti(z ~ month + sex + measure, data=gnrha,
                level=1, fitfunction=rma.glmulti, crit="aicc", confsetsize=128)
 
 print(res)
@@ -29,7 +39,7 @@ top <- top[top$aicc <= min(top$aicc) + 2,]
 top 
 
 
-res_treat <- glmulti(z ~ month + sex + age_0, data=gnrha_treat,
+res_treat <- glmulti(z ~ month + sex + age_0 + measure, data=gnrha_treat,
                level=1, fitfunction=rma.glmulti, crit="aicc", confsetsize=128)
 
 print(res_treat)

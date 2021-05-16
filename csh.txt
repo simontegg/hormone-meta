@@ -1,0 +1,135 @@
+Call:  mixmeta(formula = z ~ period, S = SE, data = t_vs_baseline, random = ~1 | 
+    study/cohort, method = "ml")
+
+Univariate extended random-effects meta-regression
+Dimension: 1
+Estimation method: ML
+
+Fixed-effects coefficients
+                Estimate  Std. Error        z  Pr(>|z|)  95%ci.lb  95%ci.ub   
+(Intercept)       0.0823      0.1046   0.7864    0.4317   -0.1228    0.2873   
+periodfollowup   -0.1761      0.1566  -1.1247    0.2607   -0.4830    0.1308   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1 
+
+Random-effects (co)variance components
+ Formula: ~1 | study
+ Structure: General positive-definite
+  Std. Dev
+    0.0000
+
+ Formula: ~1 | cohort
+ Structure: General positive-definite
+  Std. Dev
+    0.0001
+
+Univariate Cochran Q-test for residual heterogeneity:
+Q = 10.3492 (df = 32), p-value = 0.9999
+I-square statistic = 0.0%
+
+34 units, 1 outcome, 34 observations, 2 fixed and 2 random-effects parameters
+  logLik       AIC       BIC  
+-10.7462   29.4923   35.5978  
+
+Call:  mixmeta(formula = z ~ period, S = SE, data = t_vs_start, random = ~1 | 
+    study/cohort, method = "ml")
+
+Univariate extended random-effects meta-regression
+Dimension: 1
+Estimation method: ML
+
+Fixed-effects coefficients
+             Estimate  Std. Error        z  Pr(>|z|)  95%ci.lb  95%ci.ub     
+(Intercept)   -0.0971      0.1216  -0.7988    0.4244   -0.3355    0.1412     
+periodstart   -0.5478      0.1505  -3.6396    0.0003   -0.8429   -0.2528  ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1 
+
+Random-effects (co)variance components
+ Formula: ~1 | study
+ Structure: General positive-definite
+  Std. Dev
+    0.0000
+
+ Formula: ~1 | cohort
+ Structure: General positive-definite
+  Std. Dev
+    0.0724
+
+Univariate Cochran Q-test for residual heterogeneity:
+Q = 13.1773 (df = 35), p-value = 0.9997
+I-square statistic = 0.0%
+
+37 units, 1 outcome, 37 observations, 2 fixed and 2 random-effects parameters
+  logLik       AIC       BIC  
+-12.5166   33.0332   39.4769  
+
+Call:  mixmeta(formula = z ~ period, S = SE, data = e_vs_baseline, random = ~1 | 
+    study/cohort, method = "ml")
+
+Univariate extended random-effects meta-regression
+Dimension: 1
+Estimation method: ML
+
+Fixed-effects coefficients
+                Estimate  Std. Error        z  Pr(>|z|)  95%ci.lb  95%ci.ub
+(Intercept)      -0.5894      0.1209  -4.8765    0.0000   -0.8263   -0.3525
+periodfollowup   -0.2674      0.1784  -1.4995    0.1337   -0.6170    0.0821
+                   
+(Intercept)     ***
+periodfollowup     
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1 
+
+Random-effects (co)variance components
+ Formula: ~1 | study
+ Structure: General positive-definite
+  Std. Dev
+    0.0000
+
+ Formula: ~1 | cohort
+ Structure: General positive-definite
+  Std. Dev
+    0.0000
+
+Univariate Cochran Q-test for residual heterogeneity:
+Q = 13.0382 (df = 28), p-value = 0.9927
+I-square statistic = 0.0%
+
+30 units, 1 outcome, 30 observations, 2 fixed and 2 random-effects parameters
+  logLik       AIC       BIC  
+-12.9807   33.9615   39.5662  
+
+Call:  mixmeta(formula = z ~ period, S = SE, data = e_vs_start, random = ~1 | 
+    study/cohort, method = "ml")
+
+Univariate extended random-effects meta-regression
+Dimension: 1
+Estimation method: ML
+
+Fixed-effects coefficients
+             Estimate  Std. Error        z  Pr(>|z|)  95%ci.lb  95%ci.ub     
+(Intercept)   -0.8568      0.1312  -6.5327    0.0000   -1.1139   -0.5998  ***
+periodstart   -0.2757      0.1721  -1.6024    0.1091   -0.6130    0.0615     
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1 
+
+Random-effects (co)variance components
+ Formula: ~1 | study
+ Structure: General positive-definite
+  Std. Dev
+    0.0000
+
+ Formula: ~1 | cohort
+ Structure: General positive-definite
+  Std. Dev
+    0.0000
+
+Univariate Cochran Q-test for residual heterogeneity:
+Q = 16.6603 (df = 30), p-value = 0.9764
+I-square statistic = 0.0%
+
+32 units, 1 outcome, 32 observations, 2 fixed and 2 random-effects parameters
+  logLik       AIC       BIC  
+-14.8119   37.6237   43.4867  
+
