@@ -1,8 +1,9 @@
 library(tidyverse)
 library(dplyr)
 library(mixmeta)
+library(mixmeta)
 
-# sink('./csh.txt')
+sink('./csh.txt')
 
 # Load data
 data <- read_csv('./data.csv')
@@ -16,7 +17,7 @@ data <- data %>% mutate(measure = case_when(measure == 'HAZ_spine_BMD' ~ "spine_
 # Prepare Testosterone data.frames
 testosterone <- filter(data, !is.na(z), treatment == 'Testosterone')
 t_start  <- filter(testosterone, month == 0)
-t_followup  <- filter(testosterone, month >= 24)
+t_followup  <- filter(testosterone, month >= 17)
 
 t_vs_baseline  <- bind_rows(t_followup, t_followup, .id = 'ID')
 t_vs_baseline  <- t_vs_baseline %>% mutate(z = case_when(ID == "2" ~ baseline,
@@ -37,7 +38,7 @@ t_vs_start  <- t_vs_start %>% mutate(period = factor(period))
 # Prepare Estrogen data.frames
 estrogen <- filter(data, !is.na(z), treatment == 'Estrogen')
 e_start  <- filter(estrogen, month == 0)
-e_followup  <- filter(estrogen, month >= 24)
+e_followup  <- filter(estrogen, month >= 21)
 
 e_vs_baseline  <- bind_rows(e_followup, e_followup, .id = 'ID')
 e_vs_baseline  <- e_vs_baseline %>% mutate(z = case_when(ID == "2" ~ baseline,
@@ -66,6 +67,12 @@ summary(t_m1)
 summary(t_m2)
 summary(e_m1)
 summary(e_m2)
+
+
+predict_df <- data.frame(period = c('start', 'followup'))
+predict_df$t_m2  <- predict(t_m2, predict_df)
+predict_df$e_m2  <- predict(e_m2, predict_df)
+write_csv(predict_df, file = "./predict_csh.csv")
 
 
 # summary(e_m1)

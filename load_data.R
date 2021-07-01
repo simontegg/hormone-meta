@@ -26,10 +26,13 @@ cols  <- c('id',
            'age_0',	
            'n',	
            'baseline',
-           'baseline_SE')
+           'baseline_SE',
+           'baseline_SD',
+            'abs_per',
+            'abs_per_SE')
 
 SHEET_ID  <- "1lwbN784ibPyx09uXo_o9B6XCGvHv_Zax00_vsLQdBvc"
-sheet <- read_sheet(SHEET_ID, range="bone!A1:Z265", col_types="ciiciccccddddddcdddddddidd")
+sheet <- read_sheet(SHEET_ID, range="bone!A1:AC271", col_types="ciiciccccddddddcdddddddiddddd")
 write_csv(sheet, './data.csv')
 
 

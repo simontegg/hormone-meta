@@ -1,0 +1,129 @@
+Call:  mixmeta(formula = z ~ factor(period), S = SE, data = gnrha_z, 
+    random = ~1 | study/cohort, method = "ml")
+
+Univariate extended random-effects meta-regression
+Dimension: 1
+Estimation method: ML
+
+Fixed-effects coefficients
+                        Estimate  Std. Error        z  Pr(>|z|)  95%ci.lb
+(Intercept)              -0.2445      0.1618  -1.5114    0.1307   -0.5616
+factor(period)followup   -0.8156      0.0907  -8.9915    0.0000   -0.9934
+                        95%ci.ub     
+(Intercept)               0.0726     
+factor(period)followup   -0.6378  ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1 
+
+Random-effects (co)variance components
+ Formula: ~1 | study
+ Structure: General positive-definite
+  Std. Dev
+    0.0000
+
+ Formula: ~1 | cohort
+ Structure: General positive-definite
+  Std. Dev
+    0.5499
+
+Univariate Cochran Q-test for residual heterogeneity:
+Q = 320.9600 (df = 100), p-value = 0.0000
+I-square statistic = 68.8%
+
+102 units, 1 outcome, 102 observations, 2 fixed and 2 random-effects parameters
+   logLik        AIC        BIC  
+-134.4133   276.8266   287.3265  
+
+Call:  mixmeta(formula = z ~ month + factor(sex), S = SE, data = gnrha_treat, 
+    random = ~I(month - 12) | study/cohort, method = "ml")
+
+Univariate extended random-effects meta-regression
+Dimension: 1
+Estimation method: ML
+
+Fixed-effects coefficients
+              Estimate  Std. Error        z  Pr(>|z|)  95%ci.lb  95%ci.ub   
+(Intercept)     0.1680      0.5428   0.3096    0.7569   -0.8957    1.2318   
+month          -0.0430      0.0288  -1.4908    0.1360   -0.0995    0.0135   
+factor(sex)M   -0.2825      0.2896  -0.9754    0.3294   -0.8502    0.2852   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1 
+
+Random-effects (co)variance components
+ Formula: ~I(month - 12) | study
+ Structure: General positive-definite
+               Std. Dev         Corr
+(Intercept)      0.0001  (Intercept)
+I(month - 12)    0.0000      -0.9512
+
+ Formula: ~I(month - 12) | cohort
+ Structure: General positive-definite
+               Std. Dev         Corr
+(Intercept)      0.4736  (Intercept)
+I(month - 12)    0.0731           -1
+
+Univariate Cochran Q-test for residual heterogeneity:
+Q = 250.3366 (df = 42), p-value = 0.0000
+I-square statistic = 83.2%
+
+45 units, 1 outcome, 45 observations, 3 fixed and 6 random-effects parameters
+(6 units removed due to missingness)
+  logLik       AIC       BIC  
+-92.2083  202.4166  218.6766  
+
+Call:  mixmeta(formula = z ~ month, S = SE, data = gnrha_treat, random = ~I(month - 
+    12) | study/cohort, method = "ml")
+
+Univariate extended random-effects meta-regression
+Dimension: 1
+Estimation method: ML
+
+Fixed-effects coefficients
+             Estimate  Std. Error        z  Pr(>|z|)  95%ci.lb  95%ci.ub   
+(Intercept)   -0.0040      0.5251  -0.0076    0.9939   -1.0331    1.0251   
+month         -0.0463      0.0250  -1.8531    0.0639   -0.0952    0.0027  .
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1 
+
+Random-effects (co)variance components
+ Formula: ~I(month - 12) | study
+ Structure: General positive-definite
+               Std. Dev         Corr
+(Intercept)      0.0000  (Intercept)
+I(month - 12)    0.0000      -0.9923
+
+ Formula: ~I(month - 12) | cohort
+ Structure: General positive-definite
+               Std. Dev         Corr
+(Intercept)      0.5920  (Intercept)
+I(month - 12)    0.0777           -1
+
+Univariate Cochran Q-test for residual heterogeneity:
+Q = 255.0015 (df = 49), p-value = 0.0000
+I-square statistic = 80.8%
+
+51 units, 1 outcome, 51 observations, 2 fixed and 6 random-effects parameters
+  logLik       AIC       BIC  
+-97.1880  210.3761  225.8307  
+
+[1] "spine_BMD"
+ [1] 0.867 0.866 0.878 0.695 0.711 0.731 0.960 0.900 0.760 0.770 0.680 0.730
+[13] 0.720 0.760
+[1] "1 sex only"
+[1] "spine_BMAD"
+[1] "hip_BMD"
+ [1] 0.766 0.774 0.773 0.766 0.774 0.773 0.840 0.760 0.840 0.770 0.810 0.820
+[13] 0.760 0.790 0.820 0.810
+[1] "spine_aBMD"
+ [1] 0.73 0.80 0.75 0.80 0.95 0.92 0.95 0.92 0.84 0.84 0.95 0.91
+[1] "hip_aBMD"
+ [1] 0.79 0.83 0.79 0.83 0.93 0.89 0.93 0.89 0.88 0.87 0.92 0.88
+[1] "body_BMD"
+[1] 0.88 0.92 0.88 0.92 1.03 1.01 1.03 1.01
+[1] "hip_BMAD"
+ [1] 0.30 0.28 0.30 0.28 0.28 0.26 0.32 0.30 0.28 0.26 0.32 0.31 0.31 0.30 0.33
+[16] 0.30 0.29 0.27 0.30 0.30
+[1] "spine_BMC"
+[1] 39.60 41.20 34.10 40.10 37.05 42.40
+[1] "hip_BMC"
+[1] 25.5 26.1 23.9 26.3 26.1 26.8

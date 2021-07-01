@@ -7,8 +7,8 @@ Estimation method: ML
 
 Fixed-effects coefficients
                 Estimate  Std. Error        z  Pr(>|z|)  95%ci.lb  95%ci.ub   
-(Intercept)       0.0823      0.1046   0.7864    0.4317   -0.1228    0.2873   
-periodfollowup   -0.1761      0.1566  -1.1247    0.2607   -0.4830    0.1308   
+(Intercept)       0.1076      0.0976   1.1019    0.2705   -0.0838    0.2990   
+periodfollowup   -0.2246      0.1448  -1.5513    0.1208   -0.5083    0.0592   
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1 
 
@@ -21,15 +21,15 @@ Random-effects (co)variance components
  Formula: ~1 | cohort
  Structure: General positive-definite
   Std. Dev
-    0.0001
+    0.0000
 
 Univariate Cochran Q-test for residual heterogeneity:
-Q = 10.3492 (df = 32), p-value = 0.9999
+Q = 11.4236 (df = 38), p-value = 1.0000
 I-square statistic = 0.0%
 
-34 units, 1 outcome, 34 observations, 2 fixed and 2 random-effects parameters
+40 units, 1 outcome, 40 observations, 2 fixed and 2 random-effects parameters
   logLik       AIC       BIC  
--10.7462   29.4923   35.5978  
+-12.2699   32.5399   39.2954  
 
 Call:  mixmeta(formula = z ~ period, S = SE, data = t_vs_start, random = ~1 | 
     study/cohort, method = "ml")
@@ -40,8 +40,8 @@ Estimation method: ML
 
 Fixed-effects coefficients
              Estimate  Std. Error        z  Pr(>|z|)  95%ci.lb  95%ci.ub     
-(Intercept)   -0.0971      0.1216  -0.7988    0.4244   -0.3355    0.1412     
-periodstart   -0.5478      0.1505  -3.6396    0.0003   -0.8429   -0.2528  ***
+(Intercept)   -0.1202      0.1097  -1.0950    0.2735   -0.3352    0.0949     
+periodstart   -0.5268      0.1429  -3.6869    0.0002   -0.8069   -0.2468  ***
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1 
 
@@ -54,15 +54,15 @@ Random-effects (co)variance components
  Formula: ~1 | cohort
  Structure: General positive-definite
   Std. Dev
-    0.0724
+    0.0564
 
 Univariate Cochran Q-test for residual heterogeneity:
-Q = 13.1773 (df = 35), p-value = 0.9997
+Q = 13.6792 (df = 38), p-value = 0.9999
 I-square statistic = 0.0%
 
-37 units, 1 outcome, 37 observations, 2 fixed and 2 random-effects parameters
+40 units, 1 outcome, 40 observations, 2 fixed and 2 random-effects parameters
   logLik       AIC       BIC  
--12.5166   33.0332   39.4769  
+-13.3105   34.6209   41.3764  
 
 Call:  mixmeta(formula = z ~ period, S = SE, data = e_vs_baseline, random = ~1 | 
     study/cohort, method = "ml")
@@ -73,11 +73,11 @@ Estimation method: ML
 
 Fixed-effects coefficients
                 Estimate  Std. Error        z  Pr(>|z|)  95%ci.lb  95%ci.ub
-(Intercept)      -0.5894      0.1209  -4.8765    0.0000   -0.8263   -0.3525
-periodfollowup   -0.2674      0.1784  -1.4995    0.1337   -0.6170    0.0821
+(Intercept)      -0.5921      0.1152  -5.1389    0.0000   -0.8179   -0.3663
+periodfollowup   -0.2936      0.1685  -1.7421    0.0815   -0.6239    0.0367
                    
 (Intercept)     ***
-periodfollowup     
+periodfollowup    .
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1 
 
@@ -93,12 +93,12 @@ Random-effects (co)variance components
     0.0000
 
 Univariate Cochran Q-test for residual heterogeneity:
-Q = 13.0382 (df = 28), p-value = 0.9927
+Q = 14.2957 (df = 32), p-value = 0.9971
 I-square statistic = 0.0%
 
-30 units, 1 outcome, 30 observations, 2 fixed and 2 random-effects parameters
+34 units, 1 outcome, 34 observations, 2 fixed and 2 random-effects parameters
   logLik       AIC       BIC  
--12.9807   33.9615   39.5662  
+-14.6746   37.3491   43.4545  
 
 Call:  mixmeta(formula = z ~ period, S = SE, data = e_vs_start, random = ~1 | 
     study/cohort, method = "ml")
@@ -109,8 +109,8 @@ Estimation method: ML
 
 Fixed-effects coefficients
              Estimate  Std. Error        z  Pr(>|z|)  95%ci.lb  95%ci.ub     
-(Intercept)   -0.8568      0.1312  -6.5327    0.0000   -1.1139   -0.5998  ***
-periodstart   -0.2757      0.1721  -1.6024    0.1091   -0.6130    0.0615     
+(Intercept)   -0.8857      0.1230  -7.2010    0.0000   -1.1267   -0.6446  ***
+periodstart   -0.2469      0.1659  -1.4879    0.1368   -0.5721    0.0783     
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1 
 
@@ -126,10 +126,10 @@ Random-effects (co)variance components
     0.0000
 
 Univariate Cochran Q-test for residual heterogeneity:
-Q = 16.6603 (df = 30), p-value = 0.9764
+Q = 17.7265 (df = 32), p-value = 0.9805
 I-square statistic = 0.0%
 
-32 units, 1 outcome, 32 observations, 2 fixed and 2 random-effects parameters
+34 units, 1 outcome, 34 observations, 2 fixed and 2 random-effects parameters
   logLik       AIC       BIC  
--14.8119   37.6237   43.4867  
+-15.8035   39.6069   45.7124  
 
